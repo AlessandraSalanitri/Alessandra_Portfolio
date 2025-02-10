@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profileImage from "../assets/me.png";
-import Resume from "../assets/Alessandra Salanitri_SoftwareEngineer_Resume.pdf";
 import "../styles/MainPage.css";
 
 
@@ -22,11 +21,11 @@ const MainPage = () => {
             </p>
 
             {/* Resume Button */}
-            <a href="../assets/Alessandra Salanitri_SoftwareEngineer_Resume.pdf" 
-            className="cta-button" 
-            target="_blank" 
-            rel="noopener noreferrer">
-            My Resume
+            <a href="/Alessandra Salanitri_SoftwareEngineer_Resume.pdf" 
+               className="cta-button" 
+               target="_blank" 
+               rel="noopener noreferrer">
+               My Resume
             </a>
 
 
