@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import profileImage from "../assets/me.png";
+import Resume from "../assets/Alessandra Salanitri_SoftwareEngineer_Resume.pdf";
 import "../styles/MainPage.css";
 
 
