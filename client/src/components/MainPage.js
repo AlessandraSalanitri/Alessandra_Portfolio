@@ -21,7 +21,7 @@ const MainPage = () => {
             </p>
 
             {/* Resume Button */}
-            <a href="../assets/AlessandraSalanitri_SoftwareEngineer_Resume.pdf" 
+            <a href="../assets/Alessandra Salanitri_SoftwareEngineer_Resume.pdf" 
             className="cta-button" 
             target="_blank" 
             rel="noopener noreferrer">
