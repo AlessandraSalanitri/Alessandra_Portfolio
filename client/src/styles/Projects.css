@@ -1,0 +1,320 @@
+/* Background Container */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+/* Static Starry Sky */
+.stars {
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cloud Layers */
+.clouds {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+/* Animations for Cloud Layers */
+.cloud-layer-1 {
+    top: 30%;
+    animation: moveClouds 60s linear infinite;
+}
+
+.cloud-layer-2 {
+    top: 50%;
+    animation: moveClouds 90s linear infinite reverse;
+    opacity: 0.5;
+}
+
+.cloud-layer-3 {
+    top: 70%;
+    animation: moveClouds 120s linear infinite;
+    opacity: 0.4;
+}
+
+/* Keyframes for Cloud Movement */
+@keyframes moveClouds {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Enable scrolling only on the Projects Page */
+.projects-page {
+    text-align: center;
+    padding: 60px 20px;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* MainPage Title*/
+.projects-title {
+    position: relative;
+    text-align: center;
+    font-size: 3.6rem;
+    margin-left: 18%;
+    color: white;
+    margin-top: 80px;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    font-family: "Rouge Script", serif;
+}
+
+/*Cybersecurity projects title*/
+.projects-title2 {
+    position: relative;
+    text-align: center;
+    font-size: 3.6rem;
+    margin-left: 18%;
+    color: white;
+    margin-top: -150px;   /* Space between title and buttons filter */
+    padding-top: 5px; 
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.6);
+    font-family: "Rouge Script", serif;
+}
+
+/* Cyber Security Project Title */
+.cybersecurity-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white; /* White text */
+    margin-bottom: 10px;
+    text-shadow: 
+        -1px -1px 0 #182652,  
+         1px -1px 0 #182652,
+        -1px  1px 0 #182652,  
+         1px  1px 0 #182652; /* Blue border around text */
+}
+
+/* Cyber Security Project buttons */
+.view-project-button {
+    background: linear-gradient(to bottom, #337ab7, #182652); 
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Round button */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px; /* Add spacing */
+}
+
+.view-project-button:hover {
+    background: linear-gradient(to bottom, #182652, #337ab7); 
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.view-project-button:active {
+    background: linear-gradient(to bottom, #00d4ff, #0099ff); 
+    transform: scale(1.1);
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Category Buttons */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    margin-left: 190px;
+}
+
+.filter-btn {
+    background: linear-gradient(180deg, #3DA4F9, #182652);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #00d1ff;
+    transform: scale(1.1);
+}
+
+
+/* Project Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 50px; /* Space between project cards */
+    margin-left: 18%;
+    margin-top: 50px;
+    padding-bottom: 200px; 
+}
+
+/* Project Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    width: 300px;
+    text-align: center;
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.6);
+}
+
+/* CARDS CSS:: Title */
+.project-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 10px;
+    text-shadow: 
+        -1px -1px 0 #182652,  
+         1px -1px 0 #182652,
+        -1px  1px 0 #182652,  
+         1px  1px 0 #182652; 
+}
+
+/* Description */
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: white; 
+    margin-bottom: 10px;
+    text-shadow: 
+        -1px -1px 0 #182652,  
+         1px -1px 0 #182652,
+        -1px  1px 0 #182652,  
+         1px  1px 0 #182652; 
+}
+
+/* Technologies Used */
+.project-technologies {
+    font-size: 1rem;
+    color: #182652;
+    margin-bottom: 10px;
+    text-shadow: 
+        -1px -1px 0 #ffffff,  
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,  
+         1px  1px 0 #ffffff; 
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Project Link "view on git"*/
+.project-link {
+    display: inline-block;
+    color: #182652;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.project-link:hover {
+    color: #f31e1e;
+    margin-bottom: 10px;
+    text-shadow: 
+        -1px -1px 0 #ffffff,  
+         1px -1px 0 #ffffff,
+        -1px  1px 0 #ffffff,  
+         1px  1px 0 #ffffff; 
+    font-size: 1.2rem;
+}
+
+/* Portfolio Link */
+.portfolio-link {
+    background: linear-gradient(to bottom, #337ab7, #182652); 
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; /* Round button */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px; /* Add spacing */
+}
+
+.portfolio-link:hover {
+    background: linear-gradient(to bottom, #182652, #337ab7); 
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .projects-title {
+        text-align: center;
+        font-size: 2.2rem;
+        margin-top: 40px;
+    }
+
+    .projects-container {
+        flex-direction: column; /* vertically on smaller screens */
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 80%; 
+        font-size: 1rem;
+    }
+
+    .category-buttons { 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+        padding: 10px;
+        margin-left: 0px;
+    }
+    
+    .filter-btn {
+        flex: 1; 
+        min-width: 120px; 
+        max-width: 180px; 
+        padding: 10px 15px;
+        text-align: center;
+        border-radius: 20px; 
+    }
+
+    .filter-btn {
+        width: 40%;
+        margin-bottom: 10px;
+    }
+
+}

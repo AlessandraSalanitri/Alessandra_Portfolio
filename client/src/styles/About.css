@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Transition Styles */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes moveToCenter {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hide Title, Tagline, and Resume after 5 sec */
+.about-page .main-title,
+.about-page .subtitle,
+.about-page .tagline,
+.about-page .social-icons,
+.about-page .cta-button {
+    animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+/* Move Image & Circle to Center */
+.about-page .profile-container {
+    animation: moveToCenter 0.2s ease-in-out forwards;
+}
+
+
+@keyframes moveCircleToCenter {
+    from {
+        bottom: -5%;
+        right: -5%;
+        width: 550px;
+        height: 550px;
+        transform: translate(0, 0);
+    }
+    to {
+        bottom: 70%; /* Center the circle */
+        right: 65%;
+        transform: translate(50%, 50%); 
+        width: 200px; /* Reduce size */
+        height: 200px;
+    }
+}
+
+/* animation when on About Page */
+.about-page .gradient-circle {
+    animation: moveCircleToCenter 0.8s ease-in-out 0.1s forwards;
+    display: block !important;
+    z-index: -1; /* Keep it behind other elements */
+}
+
+
+
+/* Move Image into Circle */
+@keyframes moveImageToCircle {
+    from {
+        bottom: 0;
+        right: -4%;
+    }
+    to {
+        bottom: 67%;
+        right: 65%;
+        transform: translate(50%, 50%); 
+    }
+}
+
+/* Resize Image */
+@keyframes resizeImage {
+    from {
+        width: 620px;
+    }
+    to {
+        width: 155px; 
+        height: 155px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+/* Apply Fixed Animations */
+.about-page .profile-container {
+    position: absolute;
+    animation: moveImageToCircle 0.8s ease-in-out 0.2s forwards;
+}
+
+.about-page .profile-img {
+    display: block;
+    max-width: 100%;
+    animation: resizeImage 0.8s ease-in-out 0.2s forwards;
+}
+
+
+
+
+
+
+/* Tech Stack Container */
+.tech-stack-container {
+    position: absolute;
+    top: 28%;
+    left: -220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* When About Page is active, make icons appear */
+.about-page .tech-stack-container {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+
+
+
+/* Individual Icons */
+.tech-icon {
+    font-size: 40px;
+    opacity: 0;
+    position: absolute;
+    transform-origin: center;
+    transform: translate(-300px, 100px); 
+    transition: opacity 0.5s ease-out;
+}
+
+/* Increase Size on Hover */
+.tech-icon:hover {
+    transform: scale(1.5);
+}
+
+/* Tech stack */
+.tech-icon::after {
+    content: attr(data-tech);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(240, 223, 167, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* Show tech title on Hover */
+.tech-icon:hover::after {
+    opacity: 1;
+}
+
+
+/* Animation to move icons in a circular motion */
+@keyframes walkToCircle {
+    0% {
+        transform: translate(-300px, 100px) scale(1); 
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-100px, 50px) scale(1.1); 
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(var(--angle)) translate(150px) rotate(calc(-1 * var(--angle)));
+        opacity: 1;
+    }
+}
+
+/* Apply Animation with  Delays */
+.about-page .tech-icon {
+    animation: walkToCircle 1.8s ease-in-out forwards;
+}
+
+.about-page .tech-icon:nth-child(1) { animation-delay: 0.3s; }
+.about-page .tech-icon:nth-child(2) { animation-delay: 0.6s; }
+.about-page .tech-icon:nth-child(3) { animation-delay: 0.9s; }
+.about-page .tech-icon:nth-child(4) { animation-delay: 1.2s; }
+.about-page .tech-icon:nth-child(5) { animation-delay: 1.5s; }
+.about-page .tech-icon:nth-child(6) { animation-delay: 1.8s; }
+.about-page .tech-icon:nth-child(7) { animation-delay: 2.1s; }
+.about-page .tech-icon:nth-child(8) { animation-delay: 2.4s; }
+.about-page .tech-icon:nth-child(9) { animation-delay: 2.7s; }
+.about-page .tech-icon:nth-child(10) { animation-delay: 3s; }
+.about-page .tech-icon:nth-child(11) { animation-delay: 3.3s; }
+.about-page .tech-icon:nth-child(12) { animation-delay: 3.6s; }
+.about-page .tech-icon:nth-child(13) { animation-delay: 3.9s; }
+.about-page .tech-icon:nth-child(14) { animation-delay: 4.2s; }
+.about-page .tech-icon:nth-child(15) { animation-delay: 4.5s; }
+.about-page .tech-icon:nth-child(16) { animation-delay: 4.8s; }
+.about-page .tech-icon:nth-child(17) { animation-delay: 5.1s; }
+.about-page .tech-icon:nth-child(18) { animation-delay: 5.4s; }
+.about-page .tech-icon:nth-child(19) { animation-delay: 5.7s; }
+.about-page .tech-icon:nth-child(20) { animation-delay: 6s; }
+
+
+
+/* Typing Effect Text */
+.typing-text {
+    font-size: 25px;
+    font-family: "Noto Serif", serif;
+    text-align: left;
+    width: 40%; 
+    white-space: pre-line; 
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    top: 15%; 
+    left: 52%; /* Move text to the right */
+    line-height: 1.4; 
+    padding-left: 20px; /* Indentation */
+
+    background: linear-gradient(180deg, #3DA4F9, #182652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    white-space: nowrap;
+}
+
+/* Cursor Blinking Effect */
+.typing-text::after {
+    content: "|"; 
+    display: inline-block;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .tech-stack-container {
+        position: absolute;
+        bottom: 43%;  
+        left: 35%; 
+        transform: translate(-50%, 0%);
+        width: 320px;  
+        height: 320px;
+    }
+
+    @keyframes walkToCircle {
+        0% {
+            transform: translate(-300px, 100px) scale(1);
+            opacity: 0;
+        }
+        50% {
+            transform: translate(-100px, 50px) scale(1.1);
+            opacity: 1;
+        }
+        100% {
+            transform: rotate(var(--angle)) translate(120px) rotate(calc(-1 * var(--angle)));
+            opacity: 1;
+        }
+    }
+
+    .tech-icon {
+        font-size: 30px; 
+    }
+
+    .typing-text {
+        font-size: 1.2rem;
+        text-align: center;
+        position: relative;
+        margin-top: 250px;
+        padding: 20px;
+        width: 85%; 
+        left: 45%;
+        transform: translateX(-50%);
+        line-height: 1.2; /* Improve readability */
+        white-space: normal; /* wrapping */
+        display: block; /* centered */
+    }
+
+}

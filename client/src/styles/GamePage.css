@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=Rouge+Script&display=swap');
+
+.game-container {
+    text-align: center;
+    background: linear-gradient(to bottom, #111, #222);
+    min-height: 100vh; /* Ensure full viewport height */
+    height: 100%; /* Ensure it expands fully */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Start from the top */
+    color: #fff;
+    padding: 20px;
+    margin: auto;
+    margin-left: 160px;
+    margin-top: 5px;
+    overflow-x: hidden; /* Prevent horizontal scroll issues */
+}
+
+
+/* Retro Gaming Font */
+.game-title, .game-subtitle, .game-prompt {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 3px 3px #000;
+}
+
+/* Title Styling */
+.game-title {
+    font-size: 2rem;
+    margin-bottom: 8px;
+    color: #ffcc00;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.game-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #3DA4F9;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.game-prompt {
+    font-family: "Noto Serif", serif;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #fdfdfd;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Game Cards */
+.game-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+/* Individual Game Card */
+.game-card {
+    width: 330px;
+    background: #2c2c2c;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Hover & Focus Effects */
+.game-card:hover {
+    transform: scale(1.08);
+    border-color: #ffcc00;
+    box-shadow: 0px 10px 20px rgba(255, 204, 0, 0.5);
+}
+
+/* Game Card Title */
+.game-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+/* Game Description */
+.game-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+/* Play Now Button */
+.game-card button {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    padding: 12px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.2s ease;
+    font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
+}
+
+/* Button Hover & Active */
+.game-card button:hover {
+    background: linear-gradient(to right, #00c6ff, #007bff);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 198, 255, 0.6);
+}
+
+.game-card button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 198, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto; /* scrolling enabled */
+        margin-top: 55px;
+    }
+
+    .game-container {
+        padding: 15px;
+        margin: auto;
+        overflow-y: auto; 
+    }
+
+    .game-title {
+        font-size: 1.6rem;
+    }
+
+    .game-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .game-prompt {
+        font-size: 1.1rem;
+    }
+
+    .game-cards {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+    }
+
+    .game-card {
+        width: 70%;
+        gap: 15px;
+    }
+}

@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure a minimum space from the top across all pages */
+body {
+  margin-top: 45vh !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 10vh auto; /* Adds a global margin-top of 10% */
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-top: 15vh !important;
+      padding: 15px;
+  }
+
+  .main-container {
+      width: 90%;
+      margin-top: 8vh;
+      padding: 10px;
+  }
+}

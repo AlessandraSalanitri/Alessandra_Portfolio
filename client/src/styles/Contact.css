@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rouge+Script&display=swap');
+
+/* Contact Page Container */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ffffff, #80bdf0);
+    color: #182652;
+    padding: 50px;
+    margin-top: 0vh !important;
+    overflow: hidden;
+    
+}
+
+/* Left Section (Contact Info) */
+.contact-info {
+    width: 45%;
+    padding: 30px;
+    text-align: center;
+    margin-left: 18%;
+    margin-top: -15%;
+}
+
+/* Contact Title */
+.contact-info h2 {
+    font-family: "Indie Flower", serif;
+    font-size: 5.5em;
+    font-weight: 200;
+    padding-left: -50px;
+    margin-bottom: 1px;
+    text-align: center;
+
+     /* Gradient Text */
+    background: linear-gradient(180deg, #3DA4F9, #182652); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-info h4 {
+    font-family: "Indie Flower", serif;
+    font-size: 2.2em;
+    font-weight: 200;
+    margin-top: 1px;
+    padding-left: 40px;
+    text-align: center;
+    
+    /* Gradient Text */
+    background: linear-gradient(180deg, #3DA4F9, #182652);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contact Details "Phone, Email, Social" txt */
+.contact-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #182652;
+}
+
+.contact-details p {
+    font-size: 1.2rem;
+    color: #182652;
+    margin-bottom: 25px;
+}
+
+/* Social Icons */
+.contact-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-social-icons a {
+    font-size: 2.2rem;
+    color: #182652;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-social-icons a:hover {
+    color: #3DA4F9;
+    transform: scale(1.5);
+}
+
+
+/* Right Section (Contact Form) */
+.contact-form-container {
+    width: 45%;
+    background: #1a1a3c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.contact-form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.contact-form-container p {
+    font-size: 1rem;
+    margin-bottom: 35px;
+    color: #ffffff;
+}
+
+/* Box */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: #182652;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+/* Contact Method (Radio Buttons) */
+.contact-method {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: white;
+    margin: 10px 0;
+}
+
+/* Send Button */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(to right, #00c6ff, #007bff);
+}
+
+
+
+/* Mobile Responsive*/
+@media (max-width: 768px) { 
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        overflow-y: auto; /* Enables scrolling only when necessary */
+        height: 100vh;      
+        padding-bottom: 30px; 
+        margin-top: 0%;
+    }
+
+    .contact-form-container {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+      /* Contact Info - Move Below Form */
+      .contact-info {
+        width: 90%;   
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .contact-info h2 {
+        font-size: 3em;
+    }
+
+    .contact-info h4 {
+        font-size: 1.2em;
+    }
+
+    .contact-details {
+        margin-top: 40px;
+    }
+
+    .contact-details h3 {
+        font-size: 1.2rem;
+        color: #182652;
+    }
+
+      /* Adjust Social Icons */
+      .contact-social-icons {
+        margin-top: 15px;
+        gap: 10px;
+    }
+
+    .contact-social-icons a {
+        font-size: 1.8rem;
+    }
+
+    .contact-social-icons a:hover {
+        color: #3DA4F9;
+        transform: scale(1.2);
+    }
+}

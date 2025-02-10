@@ -1,0 +1,129 @@
+General styling
+.snake-game-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* Start Screen */
+.snake-game-container h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #e9ec39;
+    text-shadow: 3px 3px 0px #002f72;
+}
+
+/* Buttons */
+button {
+    background: #444;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    font-family: inherit;
+}
+
+button:hover {
+    background: #666;
+    transform: scale(1.05);
+}
+
+/* Active difficulty button */
+button.active-difficulty {
+    background: #df4b4b !important;
+    color: white;
+    border: 2px solid white;
+    transform: scale(1.1);
+}
+
+
+/* Game Canvas */
+.game-canvas {
+    width: 80vw; 
+    height: 50vh; 
+    max-width: 600px; 
+    max-height: 400px; 
+    background: #222;
+    border: 3px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+}
+
+/* Score Display */
+h2, h3 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Game Over Screen */
+.game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.game-over-screen h1 {
+    font-size: 32px;
+    color: red;
+    margin-bottom: 15px;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 650px) {
+    .snake-game-container {
+        max-width: 80vw; 
+        padding: 15px;
+    }
+
+    .game-canvas {
+        width: 45vw; 
+        height: 50vh; 
+        max-height: 200px;
+        margin-left: -6%;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .game-over-screen h1 {
+        font-size: 14px;
+    }
+}
+
+/* Smaller Screens */
+@media (max-width: 450px) {
+    .game-canvas {
+        width: 85vw;
+        height: 60vh;
+    }
+
+    .snake-game-container {
+        width: 85vw;
+        padding: 10px;
+    }
+
+    .game-over-screen {
+        padding: 15px;
+    }
+}
